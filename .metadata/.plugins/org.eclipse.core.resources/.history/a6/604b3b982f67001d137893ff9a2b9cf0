@@ -1,0 +1,38 @@
+package test.testcase.com;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+import test.pom.com.Imdbhome;
+
+public class Base {
+	
+	public static WebDriver driver;
+	
+	@BeforeClass
+
+	public void setUp() {
+		
+		Imdbhome id=new Imdbhome(driver);
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\TestVagrant\\WikiImdb\\Driver\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+
+		driver.get("https://www.imdb.com/title/tt9389998/?ref_=nv_sr_srsg_0");
+		
+		id.getImdbCountry();
+		
+		System.out.println(id.getImdbCountry());
+		
+		
+	}
+	@AfterClass
+	public void endUp() {
+		System.out.println("End Test Case");
+	}
+
+
+}

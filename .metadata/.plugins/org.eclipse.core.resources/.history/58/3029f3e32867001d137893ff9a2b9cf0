@@ -1,0 +1,27 @@
+package test.pom.com;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Imdbhome {
+	
+	WebDriver driver;
+	
+    public Imdbhome(WebDriver driver) {
+		
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+}
+    
+    @FindBy(xpath="//a[@href='/search/title/?country_of_origin=IN&ref_=tt_dt_cn']")
+	private WebElement imdbCountry;
+    
+    @FindBy(xpath="//a[text()='Release date']")
+	private WebElement button;
+	
+	@FindBy(xpath="(//td[@class='release-date-item__date'])[6]")
+	private WebElement imdbDate;
+
+}

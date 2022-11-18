@@ -1,0 +1,34 @@
+package test.testcase.com;
+
+
+import org.testng.annotations.Test;
+
+import test.pom.com.Imdbhome;
+import test.pom.com.Wikihome;
+
+
+
+public class TestCases extends Base {
+	//public WebDriver driver;
+
+	@Test
+
+	public void countryMatch() {
+		 
+		Imdbhome ig= new Imdbhome(driver);
+		
+		Wikihome wk=new Wikihome(driver);
+
+         if(varc==varwc) {
+			
+			System.out.println("final country matched");
+			
+		}
+		else {
+			System.out.println("not matched");
+		}
+		
+		System.out.println("Test match country");
+	}
+
+}

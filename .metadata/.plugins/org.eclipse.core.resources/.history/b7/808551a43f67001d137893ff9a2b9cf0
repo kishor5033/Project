@@ -1,0 +1,41 @@
+package test.testcase.com;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+
+
+public class Base {
+	
+	public static WebDriver driver;
+	
+	@BeforeClass
+
+	public void setUp() {
+		
+		
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\TestVagrant\\TestVagrant\\Driver\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+
+		driver.get("https://www.imdb.com/title/tt9389998/?ref_=nv_sr_srsg_0");
+		
+		driver.manage().window().maximize();
+		
+		driver.navigate().to("https://en.wikipedia.org/wiki/Pushpa:_The_Rise");
+		
+		
+		
+		
+		
+	}
+	@AfterClass
+	public void endUp() {
+		System.out.println("End Test Case");
+	}
+
+
+}

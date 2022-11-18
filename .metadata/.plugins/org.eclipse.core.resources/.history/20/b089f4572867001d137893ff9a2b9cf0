@@ -1,0 +1,17 @@
+package test.pom.com;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class Wikihome {
+	
+		
+		WebDriver driver;
+		
+	    public Wikihome(WebDriver driver) {
+			
+			this.driver=driver;
+			PageFactory.initElements(driver, this);
+	}
+
+}

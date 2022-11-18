@@ -1,0 +1,19 @@
+package test.testcase.com;
+
+import org.openqa.selenium.WebDriver;
+
+import org.testng.annotations.Test;
+
+import test.pom.com.Imdbhome;
+
+public class TestCases extends Base {
+	WebDriver driver;
+
+	@Test
+
+	public void countryMatch() {
+		Imdbhome im = new Imdbhome(driver);
+		System.out.println("from test");
+	}
+
+}

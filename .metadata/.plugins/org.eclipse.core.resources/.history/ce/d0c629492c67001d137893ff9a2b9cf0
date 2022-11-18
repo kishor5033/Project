@@ -1,0 +1,27 @@
+package test.testcase.com;
+
+import org.openqa.selenium.WebDriver;
+
+import org.testng.annotations.AfterClass;
+
+import org.testng.annotations.Test;
+
+
+
+public class TestCases extends Base {
+	WebDriver driver;
+	
+	
+	
+	@Test
+	
+public void countryMatch() {
+		System.out.println("from test");
+	}
+	
+	@AfterClass
+	public void endUp() {
+		System.out.println("End Test Case");
+	}
+
+}
