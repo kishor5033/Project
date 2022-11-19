@@ -12,13 +12,10 @@ public class Base {
 
 	public static WebDriver driver;
 
-	public String varc;
-	public String varcdate;
-	public String wcountry;
-	public String wdate;
+	public String varc, wcountry;
+	public String varcdate, wdate;
 
 	@BeforeClass
-
 	public void setUp() {
 
 		System.setProperty("webdriver.chrome.driver", "D:\\TestVagrant\\TestVagrant\\Driver\\chromedriver.exe");

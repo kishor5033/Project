@@ -2,34 +2,31 @@ package test.testcase.com;
 
 import org.testng.annotations.Test;
 
-//import test.pom.com.Imdbhome;
-//import test.pom.com.Wikihome;
-
 public class TestCases extends Base {
-	// public WebDriver driver;
 
 	@Test
 	public void countryMatch() {
 
-		if (varc == wcountry) {
+		if (varc.equalsIgnoreCase(wcountry)) {
 
-			System.out.println("final country matched");
+			System.out.println("country matched");
 
 		} else {
-			System.out.println("not matched");
+			System.out.println("Country Test case failed");
 		}
 
-		System.out.println("Test match country");
+		System.out.println("Done country test case");
 	}
 
 	@Test
 	public void dateMatch() {
 
-		if (varcdate == wdate) {
-			System.out.println("final date matched");
+		if (varcdate.equalsIgnoreCase(wdate)) {
+			System.out.println("Date matched");
 		} else {
-			System.out.println("not matched failed the test case");
+			System.out.println("Date Test case failed");
 		}
+		System.out.println("Done Date test case");
 	}
 
 }

@@ -1,0 +1,32 @@
+package test.testcase.com;
+
+import org.testng.annotations.Test;
+
+public class TestCases extends Base {
+
+	@Test
+	public void countryMatch() {
+
+		if (varc.equalsIgnoreCase(wcountry)) {
+
+			System.out.println("country matched");
+
+		} else {
+			System.out.println("Country Test case failed");
+		}
+
+		System.out.println("Done country test case");
+	}
+
+	@Test
+	public void dateMatch() {
+
+		if (varcdate.equalsIgnoreCase(wdate)) {
+			System.out.println("date matched");
+		} else {
+			System.out.println("Date Test case failed");
+		}
+		System.out.println("Done Date test case");
+	}
+
+}
